@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% from 'action-link/macro.njk' import actionLink %}
+
+{% block content %}
+{% from "tag/macro.njk" import tag %}
+{% from "tables/macro.njk" import table %}
+
+{{ table({
+  head: [
+    {
+      text: "Account"
+    },
+    {
+      text: "Status"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Account status"
+      },
+      {
+        html: tag({
+          text: "INACTIVE",
+          classes: "nhsuk-tag--grey"
+        })
+      }
+    ]
+  ]
+}) }}
+
+{% endblock %}

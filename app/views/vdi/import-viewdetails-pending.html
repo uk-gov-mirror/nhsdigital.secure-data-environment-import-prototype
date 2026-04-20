@@ -83,6 +83,12 @@
   ]
 }) }}
 
+{% from "button/macro.njk" import button %}
+
+{{ button({
+  text: "Cancel request",
+  classes: "nhsuk-button--warning"
+}) }}
 
     </div>
   </div>
