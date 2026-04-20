@@ -89,6 +89,18 @@
 {% from "checkboxes/macro.njk" import checkboxes %}
 
 <form>
+
+{% set phoneHtml %}
+  {{ textarea({
+    id: "phone",
+    name: "phone",
+    classes: "nhsuk-u-width-two-thirds",
+    label: {
+      text: "Enter information about the checks you have done"
+    }
+  }) }}
+{% endset -%}
+
 {{ checkboxes({
   idPrefix: "example",
   name: "example",
@@ -111,7 +123,10 @@
   
     {
       value: "other",
-      text: "Other"
+      text: "Other",
+      conditional: {
+        html: phoneHtml
+      }
     }
   ]
 }) }}
@@ -164,7 +179,7 @@
     name: "email",
     classes: "nhsuk-u-width-two-thirds",
     label: {
-      text: "Enter further information about the rejection"
+      text: "Enter information about the rejection"
     }
   }) }}
 {% endset -%}
