@@ -42,25 +42,28 @@
     
   </ul>
 
-   <h2 class="nhsuk-heading-m">Choose a file to import</h2>  
-   <ul>
+   
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label nhsuk-label--m">
+    Choose a file to import
+  </label>
+  <ul>
    
    <li>you can upload one file at a time</li>
    <li>importing a file with the same name as an existing file in the environment will overwrite it</li>
    </ul>
-
-
-
-
-
-
-
-<div class="nhsuk-u-padding-bottom-6">
-  <label >
-    Upload a file
-  </label><br>
-  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full nhsuk-u-text-align-center">
+    <div style="display: inline-block; vertical-align: middle; line-height: 2.5rem;">
+      <span>examplefilename.csv</span>
+    </div>
+    <button class="nhsuk-button nhsuk-button--secondary nhsuk-u-margin-left-2 nhsuk-button--small" href="show-nothing/dsa-select-search-button-found" data-module="nhsuk-button">Remove file</button>
+  </div>
 </div>
+</div>
+
+
+
 
 
       {{ button({

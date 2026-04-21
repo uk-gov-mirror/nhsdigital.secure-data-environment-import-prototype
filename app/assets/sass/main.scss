@@ -150,3 +150,25 @@
     outline-offset: 2px;
   }
 }
+
+.app-button--small {
+  @include nhsuk-font-size(16);
+  padding: nhsuk-spacing(2) 12px;
+}
+
+.button-small {
+    height: 40px;
+}
+
+
+$nhsuk-button-padding-top-bottom-mobile: 8px;
+$nhsuk-button-padding-top-bottom-desktop: 12px;
+$nhsuk-button-padding-top-bottom-small: 5px;
+$nhsuk-button-padding-left-right: 16px;
+$nhsuk-button-padding-left-right-small: 12px;
+
+  .nhsuk-button--small {
+    padding: $nhsuk-button-padding-top-bottom-small $nhsuk-button-padding-left-right-small;
+
+    @include nhsuk-font(16, $weight: bold);
+  }
