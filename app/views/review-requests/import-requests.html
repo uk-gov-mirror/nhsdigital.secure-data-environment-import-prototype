@@ -150,7 +150,7 @@
 {% set AssignedToMe %}  
   <div>
     <h2 class="nhsuk-heading-s">Pending requests</h2>
-    <p>10 pending requests, ordered by 'priority' then 'request date' (oldest to newest)</p>
+    <p>10 pending requests, ordered by 'request date' (oldest to newest)</p>
   </div>
 
   {{ table({
@@ -219,7 +219,7 @@
     {{ button({ 
       text: "Assign selected requests",
       href: "assign-multi-import" }) }}
-    <p>10 pending requests, ordered by 'priority' then 'request date' (oldest to newest)</p>
+    <p>10 pending requests, ordered by 'request date' (oldest to newest)</p>
   </div>
 
   {{ table({
@@ -274,7 +274,7 @@
 {% set Assigned %}  
   <div>
     <h2 class="nhsuk-heading-s">Assigned pending requests</h2>
-    <p>10 pending requests, ordered by 'priority' then 'request date' (oldest to newest)</p>
+    <p>10 pending requests, ordered by 'request date' (oldest to newest)</p>
   </div>
   {{ table({
     responsive: false,
@@ -336,7 +336,7 @@
 {% set allPending %}  
   <div>
     <h2 class="nhsuk-heading-s">All pending requests</h2>
-    <p>10 pending requests, ordered by 'priority' then 'request date' (oldest to newest)</p>
+    <p>10 pending requests, ordered by 'request date' (oldest to newest)</p>
   </div>
   {{ table({
     responsive: false,
@@ -409,6 +409,13 @@
 
 {{ tabs({ 
   items: [ 
+     { 
+      label: "All pending (5)", 
+      id: "past-year", 
+      panel: { 
+        html: allPending 
+      } 
+    },
     { 
       label: "Assigned to me (3)", 
       id: "past-day", 
@@ -430,13 +437,7 @@
         html: Assigned 
       } 
     },  
-    { 
-      label: "All pending (5)", 
-      id: "past-year", 
-      panel: { 
-        html: allPending 
-      } 
-    },
+   
     { 
       label: "Actioned", 
       id: "actioned", 
